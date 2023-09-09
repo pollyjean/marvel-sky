@@ -6,23 +6,28 @@
   overflow-y: auto;
   background-attachment: local;
   background-size: contain;
+  background-position-y: center, 9rem;
   padding-top: 10rem;
 }
 
 @media (max-width: 60rem) {
   .Main {
     padding-top: 7rem;
+    background-position-y: center, 7rem;
   }
 }
 
 @media (max-width: 40rem) {
   .Main {
     padding-top: 5rem;
+    background-position-y: center, 5rem;
   }
 }
 
 @media (max-width: 30rem) {
   .Main {
     padding-top: 4rem;
+    background-position-y: center, 3em;
+    background-size: 150%;
   }
 }

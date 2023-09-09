@@ -1,0 +1,73 @@
+.Link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(1.5px);
+  border-radius: 2px;
+  position: relative;
+  transition: 0.1s all ease-in-out;
+}
+.Link:hover,
+.Link:active,
+.Link:focus {
+  transform: rotate(3deg);
+  backdrop-filter: blur(2px);
+  box-shadow: 8px 4px 4px rgba(0, 0, 0, 0.45);
+}
+.ImageBox {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+.Image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.Identity {
+  display: block;
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.RealName {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  transition: 0.1s all ease-in-out;
+  opacity: 0.6;
+  z-index: 0;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+}
+.Link:hover .RealName,
+.Link:active .RealName,
+.Link:focus .RealName {
+  opacity: 1;
+  z-index: 1;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+@media (max-width: 60rem) {
+  .Identity {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .Identity {
+    font-size: 1.45rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .Identity {
+    font-size: 1.3rem;
+  }
+}

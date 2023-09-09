@@ -1,0 +1,28 @@
+.Main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  overflow-y: auto;
+  background-attachment: local;
+  background-size: contain;
+  padding-top: 10rem;
+}
+
+@media (max-width: 60rem) {
+  .Main {
+    padding-top: 7rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .Main {
+    padding-top: 5rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .Main {
+    padding-top: 4rem;
+  }
+}

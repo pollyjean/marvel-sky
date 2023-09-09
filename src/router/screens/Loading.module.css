@@ -1,0 +1,46 @@
+.List {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr 4fr;
+  gap: 2rem;
+  padding: 2rem;
+  padding-bottom: 3rem;
+  width: 100%;
+  max-width: 70rem;
+}
+
+@media (max-width: 60rem) {
+  .List {
+    grid-template-columns: 3fr 3fr 3fr;
+    gap: 1.8rem;
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .List {
+    grid-template-columns: 2fr 2fr;
+    gap: 1.6rem;
+    padding: 1.6rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .List {
+    grid-template-columns: 2fr 2fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+.ListItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(1.5px);
+  border-radius: 2px;
+  position: relative;
+  height: 17rem;
+}

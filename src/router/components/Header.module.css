@@ -1,0 +1,77 @@
+.Wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ec1e25;
+  opacity: 0.95;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 9rem;
+  box-shadow: inset 0 0 2px #000;
+}
+.Link {
+  display: block;
+}
+.Logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -0.47rem;
+  line-height: 1;
+}
+.LogoImage {
+  height: 8.5rem;
+}
+.LogoText {
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 9rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.Exclamation {
+  position: relative;
+  top: 0rem;
+  left: 0.2rem;
+  font-size: 94%;
+}
+@media (max-width: 60rem) {
+  .Wrap {
+    height: 7rem;
+  }
+  .LogoImage {
+    height: 6.5rem;
+  }
+  .LogoText {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .Wrap {
+    height: 5rem;
+  }
+  .LogoImage {
+    height: 4.5rem;
+  }
+  .LogoText {
+    font-size: 5rem;
+    letter-spacing: -0.2rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .Wrap {
+    height: 3.5rem;
+  }
+  .LogoImage {
+    height: 2.5rem;
+  }
+  .LogoText {
+    font-size: 3rem;
+    letter-spacing: -0.1rem;
+  }
+}

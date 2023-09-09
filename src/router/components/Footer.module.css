@@ -1,0 +1,11 @@
+.Wrap {
+  text-align: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+}
+.Text {
+  font-family: "Alumni Sans", sans-serif;
+  display: block;
+  color: #fff;
+}

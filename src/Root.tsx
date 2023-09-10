@@ -36,7 +36,7 @@ const Root = () => {
         }}
       >
         <Outlet />
-        <Footer />
+        <Footer text={`Marvel Comics ${new Date().getFullYear()}`} />
       </div>
     </>
   );

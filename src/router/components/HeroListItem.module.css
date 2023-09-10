@@ -29,7 +29,6 @@
 }
 .Identity {
   display: block;
-  font-family: "Alumni Sans", sans-serif;
   font-size: 1.7rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -41,7 +40,6 @@
   border: 0.5px solid rgba(0, 0, 0, 0.7);
   border-top: 0 none;
 }
-
 .RealName {
   position: absolute;
   top: 0.5rem;

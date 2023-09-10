@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
 import HeroListItem from "../components/HeroListItem";
-import { IMarvelHeros } from "../../commonConfig";
+import { API_URL, IMarvelHeros } from "../../commonConfig";
 import styles from "./Marvels.module.css";
 
 const Marvels = () => {
-  const API_URL = `https://marvel-proxy.nomadcoders.workers.dev/v1/public/`;
   const [loading, setLoading] = useState(true);
   const [list, setList] = useState<IMarvelHeros[]>([]);
   const marvelHerosApi = async () => {
-    const json = await (await fetch(`${API_URL}characters?limit=50&orderBy=modified&series=24229,1058,2023`)).json();
+    const json = await (await fetch(`${API_URL}?limit=50&orderBy=modified&series=24229,1058,2023`)).json();
     setList(json.data.results);
     setLoading(false);
   };

@@ -6,32 +6,9 @@
   padding-bottom: 3rem;
   width: 100%;
   max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-@media (max-width: 60rem) {
-  .List {
-    grid-template-columns: 3fr 3fr 3fr;
-    gap: 1.8rem;
-    padding: 1.8rem;
-  }
-}
-
-@media (max-width: 40rem) {
-  .List {
-    grid-template-columns: 2fr 2fr;
-    gap: 1.6rem;
-    padding: 1.6rem;
-  }
-}
-
-@media (max-width: 30rem) {
-  .List {
-    grid-template-columns: 2fr 2fr;
-    gap: 1rem;
-    padding: 1rem;
-  }
-}
-
 .ListItem {
   display: flex;
   flex-direction: column;
@@ -43,7 +20,20 @@
   height: 17rem;
   animation: 25s ease-out 0.2s infinite waving;
 }
-
+@media (max-width: 40rem) {
+  .List {
+    grid-template-columns: 2fr 2fr;
+    gap: 1.6rem;
+    padding: 1.6rem;
+  }
+}
+@media (max-width: 30rem) {
+  .List {
+    grid-template-columns: 2fr 2fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
 @keyframes waving {
   0% {
     background-position: 0 -1000px;
@@ -54,5 +44,86 @@
 
   100% {
     background-position: 0 -1000px;
+  }
+}
+
+.HeroProfile {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%);
+  border-radius: 2px;
+  padding: 1.5rem 1rem;
+  margin-top: 2.5rem;
+  height: 21rem;
+  animation: 60s ease-out 0.2s infinite waving;
+}
+.ContentContainer {
+  display: grid;
+  grid-template-columns: 8rem auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%);
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  height: 12.25rem;
+  animation: 60s ease-out 0.2s infinite waving;
+}
+.Detail {
+  display: grid;
+  grid-template-columns: 15rem auto;
+  gap: 3rem;
+  padding: 2rem;
+  padding-bottom: 3rem;
+  width: 100%;
+  max-width: 70rem;
+}
+.CategoryTitle {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  height: 2rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 8rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%);
+  animation: 360s ease-out 0.2s infinite waving;
+}
+
+@media (max-width: 65rem) {
+  .Detail {
+    display: flex;
+    flex-direction: column;
+  }
+  .HeroDetail {
+    display: grid;
+    grid-template-columns: 15rem auto;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .HeroProfile {
+    margin-top: 0;
+    height: 24.18rem;
+  }
+}
+@media (max-width: 40rem) {
+  .HeroDetail {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 10rem auto;
+    padding: 0 1.5rem;
+    gap: 1rem;
+  }
+  .HeroProfile {
+    height: 39.5rem;
+  }
+}
+@media (max-width: 30rem) {
+  .ContentContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .HeroProfile {
+    height: 29.37rem;
+  }
+  .ContentContainer {
+    height: 40rem;
   }
 }

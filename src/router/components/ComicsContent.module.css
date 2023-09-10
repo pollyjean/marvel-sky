@@ -1,0 +1,79 @@
+.ContentContainer {
+  display: grid;
+  grid-template-columns: 8rem auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.ImageBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  background-size: cover, 400%;
+  background-position: center, center;
+}
+.Image {
+  display: block;
+  width: 100%;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+}
+.Empty {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ec1e25;
+  padding: 1rem;
+}
+.TextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-left: 0;
+}
+.ContentTitle {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.ContentDescription {
+  font-family: "Comic Neue", cursive;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+.ContentInformation {
+  font-family: "Comic Neue", cursive;
+  font-size: 0.8rem;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+}
+.ContentInformationSub {
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 0.45rem;
+}
+@media (max-width: 30rem) {
+  .ContentContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .ImageBox {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  .Image {
+    padding: 1rem 2.5rem;
+  }
+  .TextContainer {
+    padding-top: 0;
+    padding-left: 1rem;
+  }
+  .ContentTitle {
+    font-size: 1.6rem;
+  }
+}

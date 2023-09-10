@@ -1,33 +1,32 @@
 .Main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-grow: 1;
+  display: grid;
+  grid-template-rows: auto 3rem;
+  justify-content: stretch;
+  gap: 0;
   overflow-y: auto;
   background-attachment: local;
   background-size: contain;
   background-position-y: center, 9rem;
-  padding-top: 10rem;
+  padding-top: 13.5rem;
 }
 
 @media (max-width: 60rem) {
   .Main {
-    padding-top: 7rem;
+    padding-top: 12rem;
     background-position-y: center, 7rem;
   }
 }
-
 @media (max-width: 40rem) {
   .Main {
-    padding-top: 5rem;
+    padding-top: 1rem;
     background-position-y: center, 5rem;
+    background-size: 150% auto;
   }
 }
 
 @media (max-width: 30rem) {
   .Main {
-    padding-top: 4rem;
     background-position-y: center, 3em;
-    background-size: 150%;
+    background-size: 180%;
   }
 }

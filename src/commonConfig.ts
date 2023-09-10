@@ -1,3 +1,5 @@
+export const API_URL = "https://marvel-proxy.nomadcoders.workers.dev/v1/public/characters";
+
 export interface IMarvelHeros {
   id?: number;
   name?: string;
@@ -46,6 +48,18 @@ export enum Type {
 export interface URL {
   type?: string;
   url?: string;
+}
+
+export interface IMarvelContent {
+  id?: number;
+  title?: string;
+  variantDescription?: string;
+  description?: null | string;
+  pageCount?: number;
+  prices?: Price[];
+  thumbnail?: Thumbnail;
+  creators?: Creators;
+  rating?: string;
 }
 export interface IMarvelComics {
   id?: number;
@@ -153,78 +167,78 @@ export enum URLType {
 }
 
 export interface IMarvelEvents {
-  id: number;
-  title: string;
-  description: string;
-  resourceURI: string;
-  urls: URL[];
-  modified: string;
-  start: Date;
-  end: Date;
-  thumbnail: Thumbnail;
-  creators: Creators;
-  characters: Characters;
-  stories: Stories;
-  comics: Characters;
-  series: Characters;
-  next: Next;
-  previous: Next;
+  id?: number;
+  title?: string;
+  description?: string;
+  resourceURI?: string;
+  urls?: URL[];
+  modified?: string;
+  start?: Date;
+  end?: Date;
+  thumbnail?: Thumbnail;
+  creators?: Creators;
+  characters?: Characters;
+  stories?: Stories;
+  comics?: Characters;
+  series?: Characters;
+  next?: Next;
+  previous?: Next;
 }
 
 export interface Next {
-  resourceURI: string;
-  name: string;
+  resourceURI?: string;
+  name?: string;
 }
 
 export interface IMarvelSeries {
-  id: number;
-  title: string;
-  description: null | string;
-  resourceURI: string;
-  urls: URL[];
-  startYear: number;
-  endYear: number;
-  rating: string;
-  type: string;
-  modified: string;
-  thumbnail: Thumbnail;
-  creators: Creators;
-  characters: Characters;
-  stories: Stories;
-  comics: Characters;
-  events: Characters;
-  next: Next | null;
-  previous: Next | null;
+  id?: number;
+  title?: string;
+  description?: null | string;
+  resourceURI?: string;
+  urls?: URL[];
+  startYear?: number;
+  endYear?: number;
+  rating?: string;
+  type?: string;
+  modified?: string;
+  thumbnail?: Thumbnail;
+  creators?: Creators;
+  characters?: Characters;
+  stories?: Stories;
+  comics?: Characters;
+  events?: Characters;
+  next?: Next | null;
+  previous?: Next | null;
 }
 
 export interface Next {
-  resourceURI: string;
-  name: string;
+  resourceURI?: string;
+  name?: string;
 }
 
 export interface IMarvelStories {
-  id: number;
-  title: string;
-  description: string;
-  resourceURI: string;
-  type: Type;
-  modified: string;
-  thumbnail: null;
-  creators: Creators;
-  characters: Characters;
-  series: Characters;
-  comics: Characters;
-  events: Characters;
-  originalIssue: OriginalIssue;
+  id?: number;
+  title?: string;
+  description?: string;
+  resourceURI?: string;
+  type?: Type;
+  modified?: string;
+  thumbnail?: null;
+  creators?: Creators;
+  characters?: Characters;
+  series?: Characters;
+  comics?: Characters;
+  events?: Characters;
+  originalIssue?: OriginalIssue;
 }
 
 export interface OriginalIssue {
-  resourceURI: string;
-  name: string;
+  resourceURI?: string;
+  name?: string;
 }
 
 export interface Item {
-  resourceURI: string;
-  name: string;
-  role: string;
+  resourceURI?: string;
+  name?: string;
+  role?: string;
 }

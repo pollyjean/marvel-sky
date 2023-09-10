@@ -3,6 +3,7 @@ import Root from "./Root";
 import NotFound from "./router/screens/NotFound";
 import Marvels from "./router/screens/Marvels";
 import Hero from "./router/screens/Hero";
+import Search from "./router/screens/Search";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "/character/:heroId",
         element: <Hero />,
+      },
+      {
+        path: "/search",
+        element: <Search />,
       },
     ],
   },

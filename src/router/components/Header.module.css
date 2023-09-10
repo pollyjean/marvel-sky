@@ -71,6 +71,7 @@
 @media (max-width: 40rem) {
   .Wrap {
     position: static;
+    height: 6.25rem;
   }
   .LogoImage {
     height: 4.75rem;

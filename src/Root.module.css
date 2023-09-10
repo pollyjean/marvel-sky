@@ -2,7 +2,6 @@
   display: grid;
   grid-template-rows: auto 3rem;
   justify-content: stretch;
-  align-content: stretch;
   gap: 0;
   overflow-y: auto;
   background-attachment: local;

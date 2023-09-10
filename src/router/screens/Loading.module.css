@@ -76,6 +76,8 @@
   padding-bottom: 3rem;
   width: 100%;
   max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 .CategoryTitle {
   display: inline-block;

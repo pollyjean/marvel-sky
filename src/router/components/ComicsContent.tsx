@@ -21,11 +21,16 @@ const ComicsContent = ({
             backgroundImage: `linear-gradient(rgba(255,255,255, 0.9),rgba(255,255,255, 0.9)), url(${thumbnail?.path}.${thumbnail?.extension})`,
           }}
         >
-          <img src={`${thumbnail?.path}.${thumbnail?.extension}`} alt={`${title} Cover`} className={styles.Image} />
+          <img
+            src={`${thumbnail?.path}.${thumbnail?.extension}`}
+            alt={`${title} Cover`}
+            className={styles.Image}
+            loading="lazy"
+          />
         </figure>
       ) : (
         <figure className={styles.Empty}>
-          <img src="/marvel_logo.jpg" alt="Marvel logo" className={styles.Image} />
+          <img src="/marvel_logo.jpg" alt="Marvel logo" className={styles.Image} loading="lazy" />
         </figure>
       )}
 

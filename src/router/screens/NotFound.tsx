@@ -1,4 +1,4 @@
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Outlet, ScrollRestoration, useLocation, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import { useEffect, useState } from "react";
 import styles from "../../Root.module.css";
@@ -35,6 +35,7 @@ const NotFound = () => {
             ${randomBackground}`,
         }}
       >
+        <ScrollRestoration />
         <Outlet />
         <Footer text={"404 Not Found"} />
       </div>

@@ -20,7 +20,12 @@ const HeroListItem = ({ id, name, thumbnail }: IMarvelHeros) => {
             className={styles.Link}
           >
             <figure className={styles.ImageBox}>
-              <img className={styles.Image} src={`${thumbnail?.path}.${thumbnail?.extension}`} alt={""} />
+              <img
+                className={styles.Image}
+                src={`${thumbnail?.path}.${thumbnail?.extension}`}
+                alt={""}
+                loading="lazy"
+              />
             </figure>
             <p className={styles.Identity}>
               <span>{heroName}</span>

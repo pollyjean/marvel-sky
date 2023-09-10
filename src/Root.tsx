@@ -1,4 +1,4 @@
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Outlet, ScrollRestoration, useLocation, useNavigate } from "react-router-dom";
 import Header from "./router/components/Header";
 import { useEffect, useState } from "react";
 import styles from "./Root.module.css";
@@ -36,6 +36,7 @@ const Root = () => {
         }}
       >
         <Outlet />
+        <ScrollRestoration />
         <Footer text={`Marvel Comics ${new Date().getFullYear()}`} />
       </div>
     </>

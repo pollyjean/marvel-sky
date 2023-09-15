@@ -12,6 +12,9 @@ const ComicsContent = ({
   prices,
   rating,
 }: IMarvelContent) => {
+  if (thumbnail?.path?.includes("image_not_available")) {
+    return null;
+  }
   return (
     <li key={id} className={styles.ContentContainer}>
       {thumbnail ? (

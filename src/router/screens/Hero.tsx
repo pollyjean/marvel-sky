@@ -36,111 +36,106 @@ const Hero = () => {
   useEffect(() => {
     marvelHeroApi();
   }, []);
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <>
-      {loading ? (
-        <Loading />
-      ) : (
-        <div className={styles.Detail}>
-          <HeroProfile
-            id={character?.id}
-            name={character?.name}
-            thumbnail={character?.thumbnail}
-            description={character?.description}
-          />
+      <div className={styles.Detail}>
+        <HeroProfile
+          id={character?.id}
+          name={character?.name}
+          thumbnail={character?.thumbnail}
+          description={character?.description}
+        />
 
-          <div>
-            {comics?.length === 0 ? null : (
-              <>
-                <h2 className={CategoryTitle}>Comics</h2>
-                <ul>
-                  {comics?.map((item) => {
-                    if (item.thumbnail?.path?.includes("image_not_available")) {
-                      return null;
-                    } else {
-                      return (
-                        <ComicsContent
-                          key={item.id}
-                          id={item.id}
-                          thumbnail={item.thumbnail}
-                          title={item.title}
-                          variantDescription={item.variantDescription}
-                          description={item.description}
-                          creators={item.creators}
-                          pageCount={item.pageCount}
-                          prices={item.prices}
-                        />
-                      );
-                    }
-                  })}
-                </ul>
-              </>
-            )}
-            {events?.length === 0 ? null : (
-              <div>
-                <h2 className={CategoryTitle}>Events</h2>
-                <ul>
-                  {events?.map((item) => {
-                    if (item.thumbnail?.path?.includes("image_not_available")) {
-                      return null;
-                    } else {
-                      return (
-                        <ComicsContent
-                          key={item.id}
-                          id={item.id}
-                          thumbnail={item.thumbnail}
-                          title={item.title}
-                          description={item.description}
-                        />
-                      );
-                    }
-                  })}
-                </ul>
-              </div>
-            )}
-            {series?.length === 0 ? null : (
-              <div>
-                <h2 className={CategoryTitle}>Series</h2>
-                <ul>
-                  {series?.map((item) => {
-                    if (item.thumbnail?.path?.includes("image_not_available")) {
-                      return null;
-                    } else {
-                      return (
-                        <ComicsContent
-                          key={item.id}
-                          id={item.id}
-                          thumbnail={item.thumbnail}
-                          title={item.title}
-                          description={item.description}
-                          creators={item.creators}
-                          rating={item.rating}
-                        />
-                      );
-                    }
-                  })}
-                </ul>
-              </div>
-            )}
-            {stories?.length === 0 ? null : (
-              <div>
-                <h2 className={styles.CategoryTitle}>Stories</h2>
-                <ul>
-                  {stories?.map((item) => (
+        <div>
+          {comics?.length === 0 && (
+            <>
+              <h2 className={CategoryTitle}>Comics</h2>
+              <ul>
+                {comics?.map((item) => {
+                  return (
                     <ComicsContent
                       key={item.id}
                       id={item.id}
+                      thumbnail={item.thumbnail}
                       title={item.title}
+                      variantDescription={item.variantDescription}
                       description={item.description}
                       creators={item.creators}
+                      pageCount={item.pageCount}
+                      prices={item.prices}
                     />
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
+                  );
+                })}
+              </ul>
+            </>
+          )}
+          {events?.length === 0 && (
+            <div>
+              <h2 className={CategoryTitle}>Events</h2>
+              <ul>
+                {events?.map((item) => {
+                  if (item.thumbnail?.path?.includes("image_not_available")) {
+                    return null;
+                  } else {
+                    return (
+                      <ComicsContent
+                        key={item.id}
+                        id={item.id}
+                        thumbnail={item.thumbnail}
+                        title={item.title}
+                        description={item.description}
+                      />
+                    );
+                  }
+                })}
+              </ul>
+            </div>
+          )}
+          {series?.length === 0 && (
+            <div>
+              <h2 className={CategoryTitle}>Series</h2>
+              <ul>
+                {series?.map((item) => {
+                  if (item.thumbnail?.path?.includes("image_not_available")) {
+                    return null;
+                  } else {
+                    return (
+                      <ComicsContent
+                        key={item.id}
+                        id={item.id}
+                        thumbnail={item.thumbnail}
+                        title={item.title}
+                        description={item.description}
+                        creators={item.creators}
+                        rating={item.rating}
+                      />
+                    );
+                  }
+                })}
+              </ul>
+            </div>
+          )}
+          {stories?.length === 0 && (
+            <div>
+              <h2 className={styles.CategoryTitle}>Stories</h2>
+              <ul>
+                {stories?.map((item) => (
+                  <ComicsContent
+                    key={item.id}
+                    id={item.id}
+                    title={item.title}
+                    description={item.description}
+                    creators={item.creators}
+                  />
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </>
   );
 };

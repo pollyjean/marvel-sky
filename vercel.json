@@ -1,0 +1,12 @@
+{
+  "framework": "vite",
+  "buildCommand": "yarn tsc && yarn vite build",
+  "installCommand": "yarn install",
+  "devCommand": "yarn vite",
+  "outputDirectory": "dist",
+  "builds": [
+    {
+      "src": "dist/index.html"
+    }
+  ]
+}

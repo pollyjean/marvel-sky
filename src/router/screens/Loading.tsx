@@ -17,7 +17,7 @@ const Loading = () => {
               <ul>
                 {Array(4)
                   .fill(<li></li>)
-                  .map((item, index) => {
+                  .map((_item, index) => {
                     return <li key={index} className={styles.ContentContainer}></li>;
                   })}
               </ul>
@@ -27,7 +27,7 @@ const Loading = () => {
               <ul>
                 {Array(4)
                   .fill(<li></li>)
-                  .map((item, index) => {
+                  .map((_item, index) => {
                     return <li key={index} className={styles.ContentContainer}></li>;
                   })}
               </ul>
@@ -38,7 +38,7 @@ const Loading = () => {
         <ul className={styles.List}>
           {Array(15)
             .fill(<li></li>)
-            .map((item, index) => {
+            .map((_item, index) => {
               return <li key={index} className={styles.ListItem}></li>;
             })}
         </ul>

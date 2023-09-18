@@ -14,7 +14,7 @@ const Root = () => {
     const number = Math.floor(Math.random() * 11);
     const images = Array(11)
       .fill(0)
-      .map((item, index) => index + 1);
+      .map((_item, index) => index + 1);
     return `url(/backgrounds/${images[number]}.jpg)`;
   };
   useEffect(() => {

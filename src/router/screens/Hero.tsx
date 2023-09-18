@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Loading from "./Loading";
 import { useParams } from "react-router-dom";
 import { API_URL, IMarvelContent, IMarvelHeros } from "../../commonConfig";
-import styles, { CategoryTitle } from "./Hero.module.css";
+import styles from "./Hero.module.css";
 import HeroProfile from "../components/HeroProfile";
 import ComicsContent from "../components/ComicsContent";
 
@@ -52,7 +52,7 @@ const Hero = () => {
         <div>
           {comics?.length === 0 && (
             <>
-              <h2 className={CategoryTitle}>Comics</h2>
+              <h2 className={styles.CategoryTitle}>Comics</h2>
               <ul>
                 {comics?.map((item) => {
                   return (
@@ -74,7 +74,7 @@ const Hero = () => {
           )}
           {events?.length === 0 && (
             <div>
-              <h2 className={CategoryTitle}>Events</h2>
+              <h2 className={styles.CategoryTitle}>Events</h2>
               <ul>
                 {events?.map((item) => {
                   if (item.thumbnail?.path?.includes("image_not_available")) {
@@ -96,7 +96,7 @@ const Hero = () => {
           )}
           {series?.length === 0 && (
             <div>
-              <h2 className={CategoryTitle}>Series</h2>
+              <h2 className={styles.CategoryTitle}>Series</h2>
               <ul>
                 {series?.map((item) => {
                   if (item.thumbnail?.path?.includes("image_not_available")) {
